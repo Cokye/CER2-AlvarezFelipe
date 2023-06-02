@@ -1,0 +1,24 @@
+a{
+    color: #FFFF;
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial;
+}
+
+#titulo{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#login{
+    text-align: left;
+    margin-top: 30px;
+}
+
+.firts{
+    width: 100vw;
+    height: 100px;
+    background-color: #A6D571
+}
