@@ -1,7 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.shortcuts import get_object_or_404
-
 
 
 # Create your models here.
@@ -26,8 +25,7 @@ class Comunicado(models.Model):
     fkcategoria= models.ForeignKey(Categoria, on_delete=models.CASCADE)
     fecha_envio= models.DateField()
     fecha_ultima= models.DateField()
-    user = get_object_or_404(User, nombre = request.user)
-    usuario= user
+    usuario= AbstractUser.username
 
     def __str__(self):
         return self.titulo

@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from core.models import Comunicado
 
 
 def home(request):
-    #return HttpResponse("<h1>Home<h1/>")
-    return render(request,'core/home.html')
+    comunicados = Comunicado.objects.all()
+    data = {
+        'comunicados': comunicados
+    }
+    return render(request,'core/home.html',data)
