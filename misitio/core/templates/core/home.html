@@ -54,7 +54,7 @@
             <select name="nivel" class="form-select"
               aria-label="Default select example">
               <option value>Selecciona nivel</option>
-              <option value>General</option>
+              <option value="GEN">General</option>
               <option value="PRE">Pre-básica</option>
               <option value="BAS">Básica</option>
               <option value="MED">Media</option>
@@ -63,7 +63,6 @@
             <select name="categoria" class="form-select"
               aria-label="Default select example">
               <option value>Selecciona Categoria</option>
-              <option value=""> General </option>
               {% for cat in categorias %}
               <option value= {{cat.id}}> {{cat.nombre}}</option>
               {% endfor %}
