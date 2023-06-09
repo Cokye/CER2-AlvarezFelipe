@@ -8,6 +8,7 @@ def home(request):
     categorias = request.GET.get('categoria', None)
 
     comunicados = Comunicado.objects.all()
+    comunicados = Comunicado.objects.order_by('-fecha_emision')
     categoria = Categoria.objects.all()
 
 
